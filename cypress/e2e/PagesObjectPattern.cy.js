@@ -1,5 +1,4 @@
-import LoginPage from "../fixtures/Login";
-import HomePage from "../fixtures/HomePage";
+import { Login } from "../pages/Login";
 
 describe("Test 1", () => {
   it("Logowanie użytkownika user888@gmail.com", () => {
