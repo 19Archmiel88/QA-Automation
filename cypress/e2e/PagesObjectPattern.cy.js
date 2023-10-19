@@ -1,26 +1,29 @@
-import { Login } from "../pages/Login";
+import LoginPage from "../pages/LoginPage";
+import HomePage from "../pages/HomePage";
 
-describe("Test 1", () => {
-  it("Logowanie użytkownika user888@gmail.com", () => {
+describe("Homework Test", () => {
+  it("Logowanie użytkownika i wylogowanie - Test 1", () => {
     LoginPage.visit();
+
     LoginPage.fillEmail("user888@gmail.com");
     LoginPage.fillPassword("1234567890");
     LoginPage.clickLogInButton();
 
+    HomePage.findRightCornerButton();
     HomePage.openUserMenu();
     HomePage.clickLogOutButton();
 
     LoginPage.verifyUrl();
   });
-});
 
-describe("Test 2", () => {
-  it("Logowanie użytkownika testowyqa@qa.team", () => {
+  it("Logowanie użytkownika i wylogowanie - Test 2", () => {
     LoginPage.visit();
+
     LoginPage.fillEmail("testowyqa@qa.team");
     LoginPage.fillPassword("QA!automation-1");
     LoginPage.clickLogInButton();
 
+    HomePage.findRightCornerButton();
     HomePage.openUserMenu();
     HomePage.clickLogOutButton();
 
